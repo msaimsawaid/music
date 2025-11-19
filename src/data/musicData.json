@@ -1,0 +1,92 @@
+{
+  "featuredPlaylists": [
+    {
+      "id": 1,
+      "title": "Chill Vibes",
+      "description": "Relaxing tracks to focus",
+      "image": "/assets/playlist1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Top Hits",
+      "description": "Chart-topping songs",
+      "image": "/assets/playlist2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Jazz Classics",
+      "description": "Timeless jazz records",
+      "image": "/assets/playlist3.jpg"
+    }
+  ],
+  "newReleases": [
+    {
+      "id": 1,
+      "title": "Album 1",
+      "artist": "Artist One",
+      "year": "2024",
+      "image": "/assets/album1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Album 2",
+      "artist": "Artist Two",
+      "year": "2024",
+      "image": "/assets/album2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Album 3",
+      "artist": "Artist Three",
+      "year": "2024",
+      "image": "/assets/album3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Album 4",
+      "artist": "Artist Four",
+      "year": "2024",
+      "image": "/assets/album4.jpg"
+    }
+  ],
+  "artists": [
+    {
+      "id": 1,
+      "name": "Artist One",
+      "genre": "Pop",
+      "image": "/assets/artist1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Artist Two",
+      "genre": "Rock",
+      "image": "/assets/artist2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Artist Three",
+      "genre": "Jazz",
+      "image": "/assets/artist3.jpg"
+    }
+  ],
+  "teamMembers": [
+    {
+      "id": 1,
+      "name": "Member A",
+      "role": "Frontend Developer",
+      "image": "/assets/member1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Member B",
+      "role": "Backend Developer",
+      "image": "/assets/member2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Member C",
+      "role": "UI/UX Designer",
+      "image": "/assets/member3.jpg"
+    }
+  ]
+}
