@@ -227,4 +227,19 @@ Music World is a comprehensive React-based web application that allows users to 
   - Firebase configuration
   - Deployment setup
 
+### Member 2: M Umair
+- **Responsibilities:**
+  - Component development (Header, Footer, Cards)
+  - Styling and responsive design
+  - JSON data structure design
+  - LocalStorage services
+  - Documentation
+
+### Member 3: M Saim Sawaid
+- **Responsibilities:**
+  - AI Chat integration
+  - Theme toggle functionality
+  - Form handling and validation
+  - Error boundary implementation
+  - Testing and bug fixes
 ---

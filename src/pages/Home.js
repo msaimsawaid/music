@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'; // Add useRef import
+import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom'; // Add this import
 import musicData from '../data/musicData.json';
 import { searchMusic, getPopularSongs } from '../services/itunesApi';
 import AIChat from '../components/AIChat';
@@ -17,7 +18,7 @@ const Home = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [showSearchResults, setShowSearchResults] = useState(false);
   
-  // Add ref for the search container
+  const location = useLocation(); // Add this
   const searchContainerRef = useRef(null);
 
   useEffect(() => {
@@ -26,13 +27,21 @@ const Home = () => {
     loadPopularSongs();
   }, []);
 
+  // FIX: Reset search state when navigating to/from Home page
+  useEffect(() => {
+    setShowSearchResults(false);
+    setSearchQuery('');
+    setSearchResults([]);
+  }, [location.pathname]); // Reset when route changes
+
   const loadPopularSongs = async () => {
     try {
       setApiLoading(true);
       const songs = await getPopularSongs();
-      setPopularSongs(songs);
+      setPopularSongs(songs || []); // Added fallback
     } catch (error) {
       console.error('Failed to load popular songs:', error);
+      setPopularSongs([]); // Ensure it's always an array
     } finally {
       setApiLoading(false);
     }
@@ -52,7 +61,7 @@ const Home = () => {
 
     try {
       const results = await searchMusic(query, 12);
-      setSearchResults(results);
+      setSearchResults(results || []); // Added fallback
     } catch (error) {
       console.error('Search failed:', error);
       setSearchResults([]);
@@ -89,7 +98,7 @@ const Home = () => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [showSearchResults]); // Only re-run when showSearchResults changes
+  }, [showSearchResults]);
 
   return (
     <div>
@@ -220,7 +229,7 @@ const Home = () => {
         </section>
       )}
 
-      {/* Rest of your components remain the same */}
+      {/* Show all other content when NOT showing search results */}
       {!showSearchResults && (
         <section className="featured">
           <h2>🔥 Popular Right Now</h2>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'; // Remove useNavigate
 import SearchBar from './SearchBar';
 
 const Header = ({ onSearch }) => {
@@ -27,13 +27,27 @@ const Header = ({ onSearch }) => {
       )}
       
       <nav className="topnav">
-        <Link to="/" className={isActive('/') ? 'active' : ''}>Home</Link>
-        <Link to="/about" className={isActive('/about') ? 'active' : ''}>About</Link>
-        <Link to="/artists" className={isActive('/artists') ? 'active' : ''}>Artists</Link>
-        <Link to="/albums" className={isActive('/albums') ? 'active' : ''}>Albums</Link>
-        <Link to="/playlists" className={isActive('/playlists') ? 'active' : ''}>Playlists</Link>
-        <Link to="/github-search" className={isActive('/github-search') ? 'active' : ''}>GitHub Search</Link> {/* Add this */}
-        <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>Contact</Link>
+        <Link to="/" className={isActive('/') ? 'active' : ''}>
+          Home
+        </Link>
+        <Link to="/about" className={isActive('/about') ? 'active' : ''}>
+          About
+        </Link>
+        <Link to="/artists" className={isActive('/artists') ? 'active' : ''}>
+          Artists
+        </Link>
+        <Link to="/albums" className={isActive('/albums') ? 'active' : ''}>
+          Albums
+        </Link>
+        <Link to="/playlists" className={isActive('/playlists') ? 'active' : ''}>
+          Playlists
+        </Link>
+        <Link to="/github-search" className={isActive('/github-search') ? 'active' : ''}>
+          GitHub Search
+        </Link>
+        <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>
+          Contact
+        </Link>
       </nav>
     </header>
   );
