@@ -1,0 +1,143 @@
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  gap: 0.5rem;
+}
+
+.brand span {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.topnav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.topnav a {
+  color: #b0b0b0;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.topnav a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.topnav a.active {
+  color: white;
+  background: rgba(102, 126, 234, 0.2);
+  border-bottom: 2px solid #667eea;
+}
+
+/* Admin link specific styles */
+.topnav a.admin-link {
+  color: #ff9eb5;
+  background: rgba(255, 65, 108, 0.1);
+  border: 1px solid rgba(255, 65, 108, 0.3);
+}
+
+.topnav a.admin-link:hover {
+  background: rgba(255, 65, 108, 0.2);
+  color: #ff416c;
+}
+
+.topnav a.admin-link.active {
+  background: rgba(255, 65, 108, 0.2);
+  color: #ff416c;
+  border-bottom: 2px solid #ff416c;
+}
+
+/* Logout button */
+.logout-btn {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Search bar styles */
+.search-container {
+  flex: 1;
+  max-width: 500px;
+  margin: 0 2rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #444;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .search-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .topnav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .topnav a, .logout-btn {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}

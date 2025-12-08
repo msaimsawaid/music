@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "title": "Welcome to the World of Music",
+    "description": "Discover genres, artists, and inspiration through music.",
+    "buttonText": "Explore Now"
+  },
+  "about": {
+    "title": "About Music",
+    "content": "Music is an art form that uses sound organized in time. It is one of the most universal cultural aspects of human society. Explore classical, pop, rock, jazz, and much more!"
+  },
+  "artists": [
+    {
+      "id": 1,
+      "name": "Artist 1",
+      "genre": "Pop Singer",
+      "image": "/assets/artist1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Artist 2", 
+      "genre": "Rock Legend",
+      "image": "/assets/artist2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Artist 3",
+      "genre": "Jazz Performer",
+      "image": "/assets/artist3.jpg"
+    }
+  ]
+}
