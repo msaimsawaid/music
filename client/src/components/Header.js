@@ -7,13 +7,11 @@ import './Header.css';
 const Header = ({ onSearch }) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [localSearch, setLocalSearch] = useState('');
   const { user, logout } = useAuth();
 
   const isActive = (path) => location.pathname === path;
 
   const handleLocalSearch = (query) => {
-    setLocalSearch(query);
     if (onSearch) {
       onSearch(query);
     }
@@ -65,11 +63,11 @@ const Header = ({ onSearch }) => {
                 Admin Panel
               </Link>
             )}
-            
+
             <Link to="/dashboard" className={isActive('/dashboard') ? 'active' : ''}>
               Dashboard ({user.username})
             </Link>
-            
+
             <button onClick={handleLogout} className="logout-btn">
               Logout
             </button>
